@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Español Rápido</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="w"><h1>Español Rápido</h1><div id="stats"></div></div></header>
+<main class="w">
+  <section id="setup" class="card">
+    <h2>Build your session</h2>
+    <h3>How do you want to practise?</h3>
+    <div id="modes" class="chips"></div>
+    <p id="mdesc" class="mut"></p>
+    <h3>What do you want to learn?</h3>
+    <div id="cats" class="chips"></div>
+    <h3>Which tenses? (for conjugations)</h3>
+    <div id="tenses" class="chips"></div>
+    <div class="row opts2">
+      <label><input type="checkbox" id="voice"> Read answers aloud</label>
+      <label>New items per session
+        <select id="n"><option>5</option><option>10</option><option>20</option></select>
+      </label>
+    </div>
+    <div class="row">
+      <button id="start" class="primary">Start session</button>
+      <button id="tablesBtn">Conjugation tables</button>
+      <button id="reset">Reset progress</button>
+    </div>
+    <p id="msg" class="bad" role="status"></p>
+    <p class="mut">Missed items come back in minutes, then days, then weeks. Short daily sessions beat one long cram.</p>
+  </section>
+
+  <section id="session" class="card" hidden>
+    <div class="top"><div class="track"><div id="bar"></div></div><span id="count"></span><button id="quit">End</button></div>
+    <p id="lab" class="mut"></p>
+    <h2 id="prompt"></h2>
+    <div id="area"></div>
+    <div id="fb" role="status" aria-live="polite"></div>
+  </section>
+
+  <section id="tbl" class="card" hidden>
+    <h2>Conjugation tables</h2>
+    <div class="row"><select id="vsel"></select><button id="tback">Back</button></div>
+    <div id="tout" class="scroll"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
